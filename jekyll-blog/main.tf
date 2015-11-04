@@ -3,6 +3,8 @@ provider "aws" {
   region = "${var.aws_region}"
 }
 
+# Adding Router53 resource
+
 # Our default security group to access
 # the instances over SSH and HTTP
 resource "aws_security_group" "default" {
