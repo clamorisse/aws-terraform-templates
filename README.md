@@ -3,7 +3,7 @@ This is a terraform script to create an AWS template for a static website.
 
 ## How to use it:
 
-'''bash
+```bash
 
 # The command apply is use to run the script, assignig the path and file name containing the access key to the AWS acount.
 
