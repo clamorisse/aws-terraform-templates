@@ -35,13 +35,16 @@ resource "aws_security_group" "default" {
   }
 }
 
+# Creation of ec2 instance
 resource "aws_eip" "mgmt_instance_ip" {
     instance = "${aws_instance.web.id}"
     vpc = true
 }
 
+# Creation of a bucket in S3 present
+# in our VPC with the policy specified on policy.json 
 resource "aws_s3_bucket" "b" {
-  bucket = "tf-cosa-bucket"
+  bucket = "tf-myblog-bucket"
   acl = "public-read"
   policy = "${file("policy.json")}"
 
