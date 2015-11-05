@@ -10,7 +10,8 @@ This is a terraform script to create an AWS template for a static website.
 
 terraform apply -var 'key_name=mgmt_access_key' -var 'key_path=/path/file_name.pem'
 
-# Before running the apply command, make sure you run the plan command that shows the changes that will take place.
+# BEFORE RUNNING THE APPLY COMMAND,
+# make sure you run the plan command that shows the changes that will take place.
 
 terraform plan -var 'key_name=mgmt_access_key' -var 'key_path=/path/file_name.pem'
 
