@@ -47,6 +47,7 @@ resource "aws_s3_bucket" "b" {
   bucket = "tf-myblog-bucket"
   acl = "public-read"
   policy = "${file("policy.json")}"
+  force_destroy = 1 
 
   tags {
      Name = "My_blog"
